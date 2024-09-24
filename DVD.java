@@ -1,3 +1,4 @@
+package inventory;
 public class DVD extends Product {
     protected int lenght;
     protected int rating;
@@ -34,11 +35,18 @@ public class DVD extends Product {
         studio = "";
     }
 
-    public DVD(int lenght, int rating,String studio, int number, String name, int quantity, double price){
-        super(number, name,quantity,price);
+    public DVD(int number, String name, int quantity, Double price, int lenght, int rating, String studio){
+        super(number, name, quantity, price);
         this.lenght = lenght;
         this.rating = rating;
         this.studio = studio;
+    }
+
+    public void print() {
+        super.print();
+        System.out.println("Panjang: " + lenght);
+        System.out.println("Peringkat: " + rating);
+        System.out.println("Studio: " +studio);
     }
 
 }
